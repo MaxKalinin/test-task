@@ -27,6 +27,7 @@ public class Matches {
                 .collect(Collectors.toList());
 
         log.info("Next results were excluded as they are not match declared format: {}", excludedResults);
+        // Next results were excluded as they are not match declared format: [3:a, 3- 12]
 
         competitions.stream()
                 .filter(e -> !excludedResults.contains(e))
@@ -44,5 +45,6 @@ public class Matches {
 
         log.info("Number of points for each team - {}: {}, {}: {}", FIRST_TEAM_NAME,
                 results.get(FIRST_TEAM_NAME), SECOND_TEAM_NAME, results.get(SECOND_TEAM_NAME));
+        // Number of points for each team - Team_1: 7, Team_2: 4
     }
 }
